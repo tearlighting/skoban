@@ -1,0 +1,36 @@
+.cellBlock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2em;
+  height: 2em;
+}
+
+.wall {
+  background-image: url("@/assets/wall.png");
+}
+.floor {
+  background-image: url("@/assets/floor.png");
+}
+.cargo {
+  background-image: url("@/assets/cargo.png");
+  z-index: 100;
+  &.onTarget {
+    background-image: url("@/assets/cargo_on_target.png");
+  }
+}
+.empty {
+  background-image: url("@/assets/empty.png");
+}
+
+.keeper {
+  background-image: url("@/assets/keeper.png");
+  z-index: 100;
+  &.onTarget {
+    background-image: url("@/assets/keeper_on_target.png");
+  }
+}
+.target {
+  background-image: url("@/assets/target.png");
+  z-index: 50;
+}

@@ -1,0 +1,39 @@
+@import "./cell.less";
+.app-container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+  width: 100vw;
+  min-height: 500px;
+  min-width: 1000px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  .game-container {
+    min-height: 250px;
+    min-width: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90% 10%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    .mapContainer {
+      //   min-width: 300px;
+      min-width: 12em;
+    }
+    & > div {
+      &:first-child {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        // background-color: red;
+        //   width: 100%;
+      }
+    }
+  }
+}
