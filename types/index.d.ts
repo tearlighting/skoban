@@ -14,7 +14,7 @@ declare global {
   interface IMove {
     move(direction: EDirection): void
   }
-  interface IPushBoxInitParam {
+  interface ISkobanInitParam {
     map: ICell<ECellType>[][]
     player: ICell<ECellType.Player>
     boxes: ICell<ECellType.Box>[]

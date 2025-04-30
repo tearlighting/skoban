@@ -1,14 +1,17 @@
 import type { ECellType, EDirection } from "@/pushBox/core/config"
+import type { Skoban } from "@/skoban/core/oop"
 
 declare global {
-  interface IViewer {
-    linkData2Cell(cell: ICell): void
-    setWin(win: boolean): void
-    init(): void
+  interface IGameViewer {
+    init(skoban: Skoban): void
+    win(): void
   }
 
-  interface ICellViewer {
-    set cell(value: ICell<ECellType>): void
-    get cell(): ICell<ECellType>
+  interface ICanOntargetCell {
+    setOnTargetStyle(onTarget: boolean): void
+  }
+  interface ICellViewer<T extends ECellType> {
+    show(): void
+    remove(): void
   }
 }

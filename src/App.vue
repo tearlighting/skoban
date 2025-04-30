@@ -1,13 +1,17 @@
 <script setup lang="ts">
-// import Reactive from '@/views/reactive/index.vue'
-// import PushBoxOOP from '@/views/pushBoxOOP/index.vue'
-import PushBoxFunctional from '@/views/pushBoxFunctional/index.vue'
+
+
+// import Skoban from '@/views/vuehooks/index.vue'
+// import Skoban from '@/views/oop/dom/index.vue'
+// import Skoban from '@/views/oop/vue/index.vue'
+import Skoban from '@/views/oop/react/index.vue'
+
 </script>
 
 <template>
-	<!-- <Reactive /> -->
-	<!-- <PushBoxOOP /> -->
-	<PushBoxFunctional />
+
+
+	<Skoban />
 </template>
 
 <style scoped>

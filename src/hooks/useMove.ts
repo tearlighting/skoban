@@ -1,4 +1,4 @@
-import { EDirection } from "@/pushBox/core/config"
+import { EDirection } from "@/skoban/core/config"
 
 export function useMove(move: (direction: EDirection) => void) {
   function keydownHandler(e: KeyboardEvent) {

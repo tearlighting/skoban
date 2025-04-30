@@ -1,13 +1,8 @@
-import { ECellType } from "@/pushBox/core/config"
+import { ECellType } from "@/skoban/core/config"
 import type { levels } from "@/store"
 import type { StyleValue } from "vue"
 
-export function generateMap({
-  map,
-  player,
-  targets,
-  boxes,
-}: (typeof levels)[0]) {
+export function generateMap({ map, player, targets, boxes }: (typeof levels)[0]) {
   enum CellType {
     Wall = 0,
     floor,
@@ -34,16 +29,9 @@ export function generateMap({
         return generateCell(rowIndex, columnIndex, type)
       })
     ) as ICell<ECellType>[][],
-    player: generateCell(
-      ...player,
-      ECellType.Player
-    ) as ICell<ECellType.Player>,
-    targets: targets.map(([x, y]) =>
-      generateCell(x, y, ECellType.Target)
-    ) as ICell<ECellType.Target>[],
-    boxes: boxes.map(([x, y]) =>
-      generateCell(x, y, ECellType.Box)
-    ) as ICell<ECellType.Box>[],
+    player: generateCell(...player, ECellType.Player) as ICell<ECellType.Player>,
+    targets: targets.map(([x, y]) => generateCell(x, y, ECellType.Target)) as ICell<ECellType.Target>[],
+    boxes: boxes.map(([x, y]) => generateCell(x, y, ECellType.Box)) as ICell<ECellType.Box>[],
   }
 }
 
