@@ -4,4 +4,4 @@
 
 - [中文简体 (Simplified Chinese)](./ReadMe_zh.md)
 - [English](./ReadMe_en.md)
-- [日本語 (Japanese)](./ReadMe_jp.md)
+- [日本語 (Japanese)](./Readme_jp.md)
